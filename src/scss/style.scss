@@ -1,0 +1,238 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap');
+
+//font-family: 'Poppins', sans-serif;
+//font-family: 'Roboto', sans-serif;
+
+*, *::after, *::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style-type: none;
+}
+body {
+   max-width: 1500px;
+   background-color: $white-bg;
+   position: relative;
+
+   &::after {
+      position: absolute;
+      content: url(/src/assets/img/trapezoid.png);
+      top: 0;
+      right: 0;
+      transform: scale(0.9, 1.2);
+}
+.bounding-container {
+   max-width: 1140px;
+   height: 100%;
+   margin: 0 auto;
+   background-color: $white-bg;
+
+      
+   header{
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Roboto, sans-serif;
+      height: 39px;
+      margin: 39px 0;
+
+      .logo-wrapper{
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         cursor: pointer;
+         span {
+            font-weight: 500;
+            font-size: 22px;
+            text-transform: uppercase;
+         }
+      }
+      .nav-wrapper {
+         cursor: pointer;
+         .nav-list {
+            display: flex;
+            gap: 55px;
+            font-weight: 400;
+            font-size: 16px;
+         }      
+      
+      }
+
+      .icons-wrapper {
+         cursor: pointer;
+         display: flex;
+         gap: 40px;
+      }
+
+   }
+      
+}
+} 
+
+.main-page {
+   height: 100vh;
+   display: flex;
+   margin-bottom: 130px;
+   
+   .main-info-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 137px;
+      margin-bottom: 137px;
+      z-index: 5;
+      
+
+      h1 {
+         font-family: Poppins, sans-serif;
+         font-size: 100px;
+         font-weight: 700;
+         text-align: left;
+         
+      }
+
+         &::after {
+      content: url(/src/assets/img/Pug-puppy-preview.png);
+      position: absolute;
+      left: 500px;
+      transform: scale(1.3, 1.3);
+      }
+   }
+   
+}
+
+
+.button-primary {
+      color: #FFFFFF;
+      background: $orange;
+      border-radius: 24px;
+      width: 139px;
+      height: 48px;
+      border: none;
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: center;
+      margin-right: 20px;   
+      cursor: pointer;  
+      &.transparent {
+         background: transparent;
+         color: $orange;
+         border: 1px solid $orange;
+      }
+}
+
+.products-wrapper {
+   height: 275px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   gap: 30px;
+   margin-bottom: 118px;
+
+   .description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 241px;
+      width: 33.3%;
+      padding: 40px 25px 18px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+
+      &.first {
+         position: relative;
+         &::before {
+            content: url(/src/assets/img/simple-bowl-bg.png);
+            position: absolute;
+            top:-30px;
+            transform: translate(15%, 0);
+         }
+         &::after {
+            content: url(/src/assets/img/simple-bowl-removebg-preview.png);
+            position: absolute;
+            z-index: 1;
+            top: -20px;
+            transform: translate(30%, 0);
+         }
+      }
+      &.second {
+         border: none;
+         box-shadow: 0px 0px 8px 1px rgba(226, 123, 58, 0.1);
+         -webkit-box-shadow: 0px 0px 8px 1px rgba(226, 123, 58, 0.1);
+         -moz-box-shadow: 0px 0px 8px 1px rgba(226, 123, 58, 0.1);
+         position: relative;
+         &::before {
+            content: url(/src/assets/img/green-bowl-bg.png);
+            position: absolute;
+            top:-30px;
+            transform: translate(15%, 0);
+         }
+         &::after {
+            content: url(/src/assets/img/green-bowl-removebg-preview.png);
+            position: absolute;
+            z-index: 1;
+            top: -20px;
+            transform: translate(18%, -12%);
+         }
+      }
+
+      &.third {
+         position: relative;
+         &::before {
+            content: url(/src/assets/img/tin-bg.png);
+            position: absolute;
+            top:-30px;
+            transform: translate(15%, 0);
+         }
+         &::after {
+            content: url(/src/assets/img/tin-removebg-preview.png);
+            position: absolute;
+            z-index: 1;
+            top: -20px;
+            transform: translate(30%, 0);
+      }
+   }
+
+      h3 {
+         font-family: Poppins, sans-serif;
+         font-size: 25px;
+         font-weight: 400;
+         text-align: center;
+         margin-bottom: 11px;
+      }
+
+      p {
+         font-family: Roboto, sans-serif;
+         font-size: 16px;
+         font-weight: 400;
+         text-align: center;
+         margin-bottom: 24px;
+      }
+
+      button {
+         width: 80px;
+         height: 24px;
+         border: none;
+         background: transparent;
+         cursor: pointer;
+         color: $orange;
+         font-family: Roboto;
+         font-size: 16px;
+         font-weight: 400;
+         line-height: 24px;
+         text-align: center;
+         
+
+      }   
+}
+}
