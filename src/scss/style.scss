@@ -17,8 +17,8 @@ body {
       content: url(/src/assets/img/trapezoid.png);
       top: 0;
       right: 0;
-      transform: scale(0.9, 1.2);
 }
+} 
 .bounding-container {
    max-width: 1140px;
    height: 100%;
@@ -65,173 +65,352 @@ body {
 
    }
       
-}
-} 
-
-.main-page {
-   height: 100vh;
-   display: flex;
-   margin-bottom: 130px;
-   
-   .main-info-wrapper {
-      position: relative;
+   .main-page {
+      height: 593px;
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      gap: 50px;
-      margin-top: 137px;
-      margin-bottom: 137px;
-      z-index: 5;
+      align-items: center;
+      margin-bottom: 130px;
       
+      img {
+         transform: scale(1.5);
+         z-index: 10;
+      }
+      
+      .main-info-wrapper { 
+         .main-title {
+            font-family: Poppins, sans-serif;
+            font-size: 100px;
+            font-weight: 700;
+            text-align: left;
+         }
+         .button-primary {
+            margin-top: 60px;
+         }
+      }
+      
+   }
 
-      .main-title {
-         font-family: Poppins, sans-serif;
-         font-size: 100px;
-         font-weight: 700;
-         text-align: left;
-         
+   .products-wrapper {
+      height: 275px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 118px;
+
+      .description {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         height: 241px;
+         width: 33.3%;
+         padding: 40px 25px 18px;
+         border: 1px solid rgba(0, 0, 0, 0.1);
+         border-radius: 8px;
+
+         &.first {
+            position: relative;
+            &::before {
+               content: url(/src/assets/img/simple-bowl-bg.png);
+               position: absolute;
+               top:-30px;
+               transform: translate(15%, 0);
+            }
+            &::after {
+               content: url(/src/assets/img/simple-bowl-removebg-preview.png);
+               position: absolute;
+               z-index: 1;
+               top: -20px;
+               transform: translate(30%, 0);
+            }
+         }
+         &.second {
+            border: none;
+            box-shadow: 0px 0px 8px 1px rgba(226, 123, 58, 0.1);
+            -webkit-box-shadow: 0px 0px 8px 1px rgba(226, 123, 58, 0.1);
+            -moz-box-shadow: 0px 0px 8px 1px rgba(226, 123, 58, 0.1);
+            position: relative;
+            &::before {
+               content: url(/src/assets/img/green-bowl-bg.png);
+               position: absolute;
+               top:-30px;
+               transform: translate(15%, 0);
+            }
+            &::after {
+               content: url(/src/assets/img/green-bowl-removebg-preview.png);
+               position: absolute;
+               z-index: 1;
+               top: -20px;
+               transform: translate(18%, -12%);
+            }
+         }
+
+         &.third {
+            position: relative;
+            &::before {
+               content: url(/src/assets/img/tin-bg.png);
+               position: absolute;
+               top:-30px;
+               transform: translate(15%, 0);
+            }
+            &::after {
+               content: url(/src/assets/img/tin-removebg-preview.png);
+               position: absolute;
+               z-index: 1;
+               top: -20px;
+               transform: translate(30%, 0);
+         }
       }
 
-         &::after {
-      content: url(/src/assets/img/Pug-puppy-preview.png);
-      position: absolute;
-      left: 500px;
-      transform: scale(1.3, 1.3);
+         h3 {
+            font-family: Poppins, sans-serif;
+            font-size: 25px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 11px;
+         }
+
+         p {
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 24px;
+         }
+
+   }
+   }
+
+   .popular-products {
+      margin-bottom: 130px;
+      h2 {
+         text-align: center;
+         margin-bottom: 18px;
+      }
+      .title-tertiary {
+         text-align: center;
+         margin-bottom: 40px;
+      }
+      .two-products-wrapper {
+         display: flex;
+         gap: 30px;
+         margin-bottom: 66px;
+         text-align: center;
+
+         .product-wrapper-big {
+            flex: 0 1 50%;
+
+            div {
+               position: relative;
+            }
+
+            .first-big {
+               &::before {
+                  content: url(/src/assets/img/blue-leash-removebg-preview.png);
+                  position: absolute;
+                  top: 19%;
+                  left: 19%;
+               }
+            }
+            .second-big {
+               &::before {
+                  content: url(/src/assets/img/collars-removebg-preview.png);
+                  position: absolute;
+                  top: 16%;
+                  left: 22%;
+               }
+         }
+         p {
+            margin-top: 25px;
+            font-family: Poppins, sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 9px;
+         }
       }
    }
-   
+
+      .three-products-wrapper {
+         display: flex;
+         gap: 30px;
+         margin-bottom: 46px;
+         text-align: center;
+
+         .product-wrapper-small {
+            flex: 0 1 33.333%;
+            
+
+            div {
+               position: relative;
+               height: 273px;
+            }
+
+            .first-small {
+               &::before {
+                  content: url(/src/assets/img/brown-leash-removebg-preview.png);
+                  position: absolute;
+                  top: 0%;
+                  left: 8%;
+               }
+            }
+            .second-small {
+               &::before {
+                  content: url(/src/assets/img/black-collar-removebg-preview.png);
+                  position: absolute;
+                  top: 19%;
+                  left: 22%;
+               }
+            }
+            .third-small {
+               &::before {
+                  content: url(/src/assets/img/pink-collar-removebg-preview.png);
+                  position: absolute;
+                  top: 26%;
+                  left: 14%;
+               }
+            }
+         }
+         p {
+            margin-top: 23px;
+            font-family: Poppins, sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 9px;
+         }
+      }
+   }
+
+   .subscription-benefits {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-bottom: 86px;
+
+         img {
+            transform: translate(-15%);
+         }
+         .benefits {
+            margin-left: -80px;
+            .orange-title {
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+            color: $orange;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 4px;
+         }
+         .title-secondary {
+            margin-bottom: 18px;
+         }
+         .title-tertiary {
+            margin-bottom: 40px;
+         }
+         .button-primary {
+            width: 189px;
+         }
+      }
+   }
+
+   .monthly-subscription {
+      .title-secondary {
+         text-align: center;
+         margin-bottom: 36px;
+      }
+      .button-primary {
+         margin-left: 40%;
+      }
+      .dogs-columns-wrapper {
+         display: flex;
+         gap: 30px;
+         img {
+            margin-bottom: 51px;
+            transform: scale(0.8);
+         }
+         .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .column-description {
+               font-family: Poppins, sans-serif;
+               font-size: 20px;
+               font-weight: 500;
+               text-align: center;
+               margin-bottom: 22px;
+            }
+            .title-tertiary{
+               font-size: 15px;
+               text-align: center;
+            }
+
+            .button-border-none {
+               margin: 15px 0 46px;
+            }
+         }
+         
+      }
+   }
+
 }
 
 
+//--------------------------------------for reuse-----------------------------------------//
+
 .button-primary {
-      color: #FFFFFF;
-      background: $orange;
-      border-radius: 24px;
-      width: 139px;
-      height: 48px;
-      border: none;
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: center;
-      margin-right: 20px;   
-      cursor: pointer;  
-      &.transparent {
-         background: transparent;
-         color: $orange;
-         border: 1px solid $orange;
-      }
+   color: #FFFFFF;
+   background: $orange;
+   border-radius: 24px;
+   width: 139px;
+   height: 48px;
+   border: none;
+   font-family: Roboto, sans-serif;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 24px;
+   letter-spacing: 0em;
+   text-align: center;
+   margin-right: 20px;   
+   cursor: pointer;  
+   &.transparent {
+      background: transparent;
+      color: $orange;
+      border: 1px solid $orange;
+   }
 }
 
 .button-border-none {
-   height: 24px;
-   border: none;
-   background: transparent;
-   cursor: pointer;
-   color: $orange;
-   font-family: Roboto;
-   font-size: 16px;
-   font-weight: 400;
-   line-height: 24px;
-   text-align: center;
+height: 24px;
+border: none;
+background: transparent;
+cursor: pointer;
+color: $orange;
+font-family: Roboto;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
 }   
-
-.products-wrapper {
-   height: 275px;
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-   align-items: flex-end;
-   gap: 30px;
-   margin-bottom: 118px;
-
-   .description {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 241px;
-      width: 33.3%;
-      padding: 40px 25px 18px;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-
-      &.first {
-         position: relative;
-         &::before {
-            content: url(/src/assets/img/simple-bowl-bg.png);
-            position: absolute;
-            top:-30px;
-            transform: translate(15%, 0);
-         }
-         &::after {
-            content: url(/src/assets/img/simple-bowl-removebg-preview.png);
-            position: absolute;
-            z-index: 1;
-            top: -20px;
-            transform: translate(30%, 0);
-         }
-      }
-      &.second {
-         border: none;
-         box-shadow: 0px 0px 8px 1px rgba(226, 123, 58, 0.1);
-         -webkit-box-shadow: 0px 0px 8px 1px rgba(226, 123, 58, 0.1);
-         -moz-box-shadow: 0px 0px 8px 1px rgba(226, 123, 58, 0.1);
-         position: relative;
-         &::before {
-            content: url(/src/assets/img/green-bowl-bg.png);
-            position: absolute;
-            top:-30px;
-            transform: translate(15%, 0);
-         }
-         &::after {
-            content: url(/src/assets/img/green-bowl-removebg-preview.png);
-            position: absolute;
-            z-index: 1;
-            top: -20px;
-            transform: translate(18%, -12%);
-         }
-      }
-
-      &.third {
-         position: relative;
-         &::before {
-            content: url(/src/assets/img/tin-bg.png);
-            position: absolute;
-            top:-30px;
-            transform: translate(15%, 0);
-         }
-         &::after {
-            content: url(/src/assets/img/tin-removebg-preview.png);
-            position: absolute;
-            z-index: 1;
-            top: -20px;
-            transform: translate(30%, 0);
-      }
-   }
-
-      h3 {
-         font-family: Poppins, sans-serif;
-         font-size: 25px;
-         font-weight: 400;
-         text-align: center;
-         margin-bottom: 11px;
-      }
-
-      p {
-         font-family: Roboto, sans-serif;
-         font-size: 16px;
-         font-weight: 400;
-         text-align: center;
-         margin-bottom: 24px;
-      }
-
-}
+.square {
+height: 420px;
+background: $light-pink-bg;
+border-radius: 20px;
 }
 
+.square-border {
+width: 185px;
+height: 48px;
+border: 1px solid $orange;
+border-radius: 4px;
+margin: 0 42.5%;
+}
 .title-secondary {
    font-family: Poppins, sans-serif;
    font-size: 32px;
@@ -241,117 +420,9 @@ body {
    font-family: Roboto, sans-serif;
    font-size: 16px;
    font-weight: 400;
-   
+   color: $black-text;
+   opacity: 0.6;
 }
-.popular-products {
-   h2 {
-      text-align: center;
-      margin-bottom: 18px;
-   }
-   .title-tertiary {
-      text-align: center;
-      margin-bottom: 40px;
-   }
-   .two-products-wrapper {
-      display: flex;
-      gap: 30px;
-      margin-bottom: 66px;
-      text-align: center;
+//--------------------------------------for reuse-----------------------------------------//
 
-      .product-wrapper-big {
-         flex: 0 1 50%;
 
-         div {
-            position: relative;
-         }
-
-         .first-big {
-            &::before {
-               content: url(/src/assets/img/blue-leash-removebg-preview.png);
-               position: absolute;
-               top: 19%;
-               left: 19%;
-            }
-         }
-         .second-big {
-            &::before {
-               content: url(/src/assets/img/collars-removebg-preview.png);
-               position: absolute;
-               top: 16%;
-               left: 22%;
-            }
-      }
-      p {
-         margin-top: 25px;
-         font-family: Poppins, sans-serif;
-         font-size: 25px;
-         font-weight: 500;
-         text-align: center;
-         margin-bottom: 9px;
-      }
-   }
-}
-
-   .three-products-wrapper {
-      display: flex;
-      gap: 30px;
-      margin-bottom: 46px;
-      text-align: center;
-
-      .product-wrapper-small {
-         flex: 0 1 33.333%;
-         
-
-         div {
-            position: relative;
-            height: 273px;
-         }
-
-         .first-small {
-            &::before {
-               content: url(/src/assets/img/brown-leash-removebg-preview.png);
-               position: absolute;
-               top: 0%;
-               left: 8%;
-            }
-         }
-         .second-small {
-            &::before {
-               content: url(/src/assets/img/black-collar-removebg-preview.png);
-               position: absolute;
-               top: 19%;
-               left: 22%;
-            }
-         }
-         .third-small {
-            &::before {
-               content: url(/src/assets/img/pink-collar-removebg-preview.png);
-               position: absolute;
-               top: 26%;
-               left: 14%;
-            }
-         }
-      }
-      p {
-         margin-top: 23px;
-         font-family: Poppins, sans-serif;
-         font-size: 20px;
-         font-weight: 500;
-         text-align: center;
-         margin-bottom: 9px;
-      }
-   }
-   .square-border {
-      width: 185px;
-      height: 48px;
-      border: 1px solid $orange;
-      // opacity: 0.15;
-      border-radius: 4px;
-      margin: 0 42.5%;
-   }
-}
-.square {
-   height: 420px;
-   background: $light-pink-bg;
-   border-radius: 20px;
-}
