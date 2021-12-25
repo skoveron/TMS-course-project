@@ -1,9 +1,6 @@
 @import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap');
 
-//font-family: 'Poppins', sans-serif;
-//font-family: 'Roboto', sans-serif;
-
 *, *::after, *::before {
    margin: 0;
    padding: 0;
@@ -142,8 +139,6 @@ body {
    text-align: center;
 }   
 
-
-
 .products-wrapper {
    height: 275px;
    width: 100%;
@@ -265,6 +260,26 @@ body {
 
       .product-wrapper-big {
          flex: 0 1 50%;
+
+         div {
+            position: relative;
+         }
+
+         .first-big {
+            &::before {
+               content: url(/src/assets/img/blue-leash-removebg-preview.png);
+               position: absolute;
+               top: 19%;
+               left: 19%;
+            }
+         }
+         .second-big {
+            &::before {
+               content: url(/src/assets/img/collars-removebg-preview.png);
+               position: absolute;
+               top: 16%;
+               left: 22%;
+            }
       }
       p {
          margin-top: 25px;
@@ -275,6 +290,8 @@ body {
          margin-bottom: 9px;
       }
    }
+}
+
    .three-products-wrapper {
       display: flex;
       gap: 30px;
@@ -283,6 +300,37 @@ body {
 
       .product-wrapper-small {
          flex: 0 1 33.333%;
+         
+
+         div {
+            position: relative;
+            height: 273px;
+         }
+
+         .first-small {
+            &::before {
+               content: url(/src/assets/img/brown-leash-removebg-preview.png);
+               position: absolute;
+               top: 0%;
+               left: 8%;
+            }
+         }
+         .second-small {
+            &::before {
+               content: url(/src/assets/img/black-collar-removebg-preview.png);
+               position: absolute;
+               top: 19%;
+               left: 22%;
+            }
+         }
+         .third-small {
+            &::before {
+               content: url(/src/assets/img/pink-collar-removebg-preview.png);
+               position: absolute;
+               top: 26%;
+               left: 14%;
+            }
+         }
       }
       p {
          margin-top: 23px;
