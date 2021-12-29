@@ -319,6 +319,7 @@ body {
    }
 
    .monthly-subscription {
+      margin-bottom: 130px;
       .title-secondary {
          text-align: center;
          margin-bottom: 36px;
@@ -355,6 +356,175 @@ body {
             }
          }
          
+      }
+   }
+
+   .popular-products-gallery {
+      height: 519px;
+      display: flex;
+      gap: 31px;
+      margin-bottom: 130px;
+      .gallery-description {
+         flex: 0 1 50%;
+
+
+         .title-secondary {
+            margin-bottom: 16px;
+            text-align: center;
+         }
+         .title-tertiary {
+            margin-bottom: 38px;
+            text-align: center;
+         }
+
+         .gallery-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .square {
+               width: 262px;
+               height: 170px;
+               border-radius: 5px;
+            }
+               
+               .gallery-first {
+                  position: relative;
+                  background: $gallery-first-bg;
+
+                  &::before {
+                     content: url(/src/assets/img/red-collar-removebg.png);
+                     position: absolute;
+                     top: 20%;
+                     left: 15%;
+                  }
+
+               }
+               .gallery-second {
+                  position: relative;
+                  background: $gallery-second-bg;
+
+                  &::before {
+                     content: url(/src/assets/img/blue-collar-lash-removebg-preview.png);
+                     position: absolute;
+                     top: 17%;
+                     left: 14%;
+                  }
+               }
+               .gallery-third {
+                  position: relative;
+                  background: $gallery-third-bg;
+
+                  &::before {
+                     content: url(/src/assets/img/flower-collar-removebg-preview.png);
+                     position: absolute;
+                     top: 18%;
+                     left: 15%;
+                  }
+               }
+               .gallery-fourth {
+                  position: relative;
+                  background: $gallery-fourth-bg;
+
+                  &::before {
+                     content: url(/src/assets/img/purple-collar-removebg-preview.png);
+                     position: absolute;
+                     top: 18%;
+                     left: 15%;
+                  }
+               }
+            
+         }
+      }
+
+      .gallery-fifth {
+         height: 509px;
+         flex: 0 1 50%;
+         border-radius: 10px;
+         position: relative;
+         background: $gallery-fifth-bg;
+
+                  &::before {
+                     content: url(/src/assets/img/collar-dog-removebg-preview.png);
+                     position: absolute;
+                     top: 10%;
+                     left: 10%;
+                  }
+         
+      }
+   }
+
+   .reviews {
+      .review-comments-wrapper {
+         margin-left: 25%;
+         
+      }
+      .review-comment {
+         width: 555px;
+         height: 272px;
+         box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+         border-radius: 10px;
+         background: $white-bg;
+         position: relative;
+      }
+      .block-1 {
+         &::before {
+            content: url(/src/assets/img/arrow.png);
+            position: absolute;
+            z-index: 20;
+            top: 60%;
+            right: -12%;
+         }
+         &::after {
+            content: url(/src/assets/img/arrow.png);
+            position: absolute;
+            z-index: 20;
+            top: 75%;
+            right: -12%;
+            transform: rotate(180deg);
+            opacity: 0.4;
+         }
+      }
+      .block-2 {top: -262px;
+         left: 10px;
+         z-index: 2;
+      }
+      .block-3 {top: -524px;
+         left: 20px;
+         z-index: 4;
+      }
+      .block-4 {
+         top: -786px;
+         left: 30px;
+         z-index: 5;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 30px 30px 10px 30px;
+         gap: 20px;
+         text-align: center;
+         &::before {
+            content: url(/src/assets/img/quotes.png);
+            position: absolute;
+            z-index: 10;
+            left: 5%;
+         }
+         &::after {
+            content: url(/src/assets/img/quotes.png);
+            position: absolute;
+            z-index: 10;
+            top: 70%;
+            right: 5%;
+            transform: rotate(180deg);
+         }
+         p:first-of-type {
+            color: $gray-text;
+         }
+         span {
+            color: $gray-text;
+            font-size: 12px;
+            line-height: 24px;
+         }
       }
    }
 
