@@ -455,6 +455,12 @@ body {
    }
 
    .reviews {
+      height: 370px;
+      margin-bottom: 86px;
+      .title-secondary {
+         text-align: center;
+         margin-bottom: 22px;
+      }
       .review-comments-wrapper {
          margin-left: 25%;
          
@@ -528,7 +534,127 @@ body {
       }
    }
 
-}
+   .form-wrapper {
+      height: 346px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 96px;
+      position: relative;
+      margin-bottom: 70px;
+      &::before {
+         content: '';
+         position: absolute;
+         background: $blue-bg;
+         width: 100%;
+         height: 100%;
+         border-radius: 10px;
+         transform: skew(0deg,-2deg);
+      }
+      .form-wrapper-discription {
+         position: relative;
+         .title-secondary {
+            margin-bottom: 18px;
+            color: $white-bg;
+         }
+         .title-tertiary {
+            color: $white-bg;
+         }
+      }
+      form {
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         input {
+            border-radius: 10px 0 0 10px;
+            background: $white-bg;
+            padding: 15px 200px 15px 21px;
+            border: none;
+         }
+         button {
+            border-radius: 0 10px 10px 0;
+            background: $orange;
+            padding: 15px 37px 15px 37px;
+            border: none;
+         }
+      }
+   }
+
+   .triangle{
+      width: 0;
+      height: 0;
+      border-left: 300px solid transparent;
+      border-right: 300px solid transparent;
+      border-bottom: 63px solid $black-bg;
+      margin: 0 26%;
+   }
+   
+   footer {
+      position: relative;
+      &::after {
+         content: '';
+         position: absolute;
+         width: 1500px;
+         height: 300px;
+         top: 0;
+         left: -16%;
+         background: $black-bg;
+      }
+      
+      .footer-wrapper{
+      position: relative;
+      z-index: 10;
+      height: 200px;
+      display: flex;
+      background: $black-bg;
+
+      div:first-of-type {
+         .footer-text {
+            text-align: left;
+            span {
+               color: $orange;
+            }
+         }
+      }
+         .text-column {
+            margin:69px 0 0;
+            .footer-text {
+               color: $white-bg;
+               font-family: Roboto;
+               font-size: 16px;
+               font-weight: 400;
+               line-height: 19px;
+               letter-spacing: 0em;
+               text-align: right;
+               margin-bottom: 37px;
+            }
+         }
+         .nav-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 30% 0 18.5%;
+         }
+            .footer-title {
+               color: $white-bg;
+               margin-top: -40%;
+               font-family: Roboto;
+               font-size: 26px;
+               font-weight: 500;
+               line-height: 30px;
+               text-align: left;
+            }
+            .logo-wrapper {
+               :nth-child(2n) {
+                  margin:0 25px;
+               }
+            }
+         }
+      }
+   }
+
 
 
 //--------------------------------------for reuse-----------------------------------------//
