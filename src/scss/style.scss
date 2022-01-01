@@ -1,5 +1,8 @@
 @import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap');
+@media only screen and (max-width: 1024px) {
+
+}
 
 *, *::after, *::before {
    margin: 0;
@@ -11,6 +14,7 @@ body {
    max-width: 1500px;
    background-color: $white-bg;
    position: relative;
+   margin: 0 auto;
 
    &::after {
       position: absolute;
@@ -33,7 +37,7 @@ body {
       align-items: center;
       font-family: Roboto, sans-serif;
       height: 39px;
-      margin: 39px 0;
+      margin: 39px 0;  
 
       .logo-wrapper{
          display: flex;
@@ -71,7 +75,7 @@ body {
       justify-content: center;
       align-items: center;
       margin-bottom: 130px;
-      
+
       img {
          transform: scale(1.5);
          z-index: 10;
