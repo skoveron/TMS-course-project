@@ -585,32 +585,27 @@ body {
       }
    }
 
-   .triangle{
+   .triangle {
       width: 0;
       height: 0;
       border-left: 300px solid transparent;
       border-right: 300px solid transparent;
       border-bottom: 63px solid $black-bg;
-      margin: 0 26%;
+      margin: 0 auto;
    }
    
+   
+   }
    footer {
-      position: relative;
-      &::after {
-         content: '';
-         position: absolute;
-         width: 1500px;
-         height: 300px;
-         top: 0;
-         left: -16%;
-         background: $black-bg;
-      }
-      
+      height: 300px;
+      background: $black-bg;
+
       .footer-wrapper{
-      position: relative;
-      z-index: 10;
+      margin: 0 auto;
+      width: 1140px;
       height: 200px;
       display: flex;
+      justify-content: center;
       background: $black-bg;
 
       div:first-of-type {
@@ -623,6 +618,7 @@ body {
       }
          .text-column {
             margin:69px 0 0;
+            flex: 33.333%;
             .footer-text {
                color: $white-bg;
                font-family: Roboto;
@@ -635,15 +631,19 @@ body {
             }
          }
          .nav-column {
+            flex: 33.333%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            margin: 0 30% 0 18.5%;
+
+            .footer-logo {
+               margin-bottom: 18px;
+            }
          }
             .footer-title {
+               flex-grow: 1;
                color: $white-bg;
-               margin-top: -40%;
                font-family: Roboto;
                font-size: 26px;
                font-weight: 500;
@@ -656,7 +656,6 @@ body {
                }
             }
          }
-      }
    }
 
 
@@ -725,4 +724,39 @@ margin: 0 42.5%;
 }
 //--------------------------------------for reuse-----------------------------------------//
 
+// -------------------------------------breakpoints---------------------------------------//
 
+@media screen and (max-width: 1200px) {
+   body {
+      width: 1140px;
+
+	.bounding-container {
+		width: 1100px;
+	}
+}
+}
+@media screen and (max-width: 1199px) {
+   body {
+      width: 1198px;
+
+	.bounding-container {
+		width: 920px;
+	}
+   .triangle{
+      margin: 0 auto;
+   }
+}
+
+}
+@media screen and (max-width: 991px) {
+
+}
+@media screen and (max-width: 767px) {
+
+}
+@media screen and (max-width: 575px) {
+   .bounding-container {
+		width: 100%;
+		padding: 0 15px;
+	}
+}
