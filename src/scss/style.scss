@@ -1,8 +1,6 @@
 @import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap');
-@media only screen and (max-width: 1024px) {
-
-}
+@import './media-r.scss';
 
 *, *::after, *::before {
    margin: 0;
@@ -189,7 +187,7 @@ body {
    }
 
    .popular-products {
-      margin-bottom: 130px;
+      margin-bottom: 60px;
       h2 {
          text-align: center;
          margin-bottom: 18px;
@@ -215,16 +213,18 @@ body {
                &::before {
                   content: url(/src/assets/img/blue-leash-removebg-preview.png);
                   position: absolute;
-                  top: 19%;
-                  left: 19%;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
                }
             }
             .second-big {
                &::before {
                   content: url(/src/assets/img/collars-removebg-preview.png);
                   position: absolute;
-                  top: 16%;
-                  left: 22%;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
                }
          }
          p {
@@ -257,24 +257,27 @@ body {
                &::before {
                   content: url(/src/assets/img/brown-leash-removebg-preview.png);
                   position: absolute;
-                  top: 0%;
-                  left: 8%;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
                }
             }
             .second-small {
                &::before {
                   content: url(/src/assets/img/black-collar-removebg-preview.png);
                   position: absolute;
-                  top: 19%;
-                  left: 22%;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
                }
             }
             .third-small {
                &::before {
                   content: url(/src/assets/img/pink-collar-removebg-preview.png);
                   position: absolute;
-                  top: 26%;
-                  left: 14%;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
                }
             }
          }
@@ -329,14 +332,15 @@ body {
          margin-bottom: 36px;
       }
       .button-primary {
-         margin-left: 40%;
+         margin: 46px 50% 0 50%;
+         transform: translate(-50%, -50%);
       }
       .dogs-columns-wrapper {
          display: flex;
-         gap: 30px;
+         justify-content: space-evenly;
+         gap: 15px;
          img {
-            margin-bottom: 51px;
-            transform: scale(0.8);
+            margin-bottom: 30px;
          }
          .column {
             display: flex;
@@ -399,8 +403,9 @@ body {
                   &::before {
                      content: url(/src/assets/img/red-collar-removebg.png);
                      position: absolute;
-                     top: 20%;
-                     left: 15%;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%, -50%);
                   }
 
                }
@@ -411,8 +416,9 @@ body {
                   &::before {
                      content: url(/src/assets/img/blue-collar-lash-removebg-preview.png);
                      position: absolute;
-                     top: 17%;
-                     left: 14%;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%, -50%);
                   }
                }
                .gallery-third {
@@ -422,8 +428,9 @@ body {
                   &::before {
                      content: url(/src/assets/img/flower-collar-removebg-preview.png);
                      position: absolute;
-                     top: 18%;
-                     left: 15%;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%, -50%);
                   }
                }
                .gallery-fourth {
@@ -433,8 +440,9 @@ body {
                   &::before {
                      content: url(/src/assets/img/purple-collar-removebg-preview.png);
                      position: absolute;
-                     top: 18%;
-                     left: 15%;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%, -50%);
                   }
                }
             
@@ -451,8 +459,9 @@ body {
                   &::before {
                      content: url(/src/assets/img/collar-dog-removebg-preview.png);
                      position: absolute;
-                     top: 10%;
-                     left: 10%;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%, -50%)
                   }
          
       }
@@ -593,8 +602,6 @@ body {
       border-bottom: 63px solid $black-bg;
       margin: 0 auto;
    }
-   
-   
    }
    footer {
       height: 300px;
@@ -708,7 +715,8 @@ width: 185px;
 height: 48px;
 border: 1px solid $orange;
 border-radius: 4px;
-margin: 0 42.5%;
+margin: 46px 50% 0 50%;
+transform: translate(-50%, -50%);
 }
 .title-secondary {
    font-family: Poppins, sans-serif;
@@ -723,40 +731,3 @@ margin: 0 42.5%;
    opacity: 0.6;
 }
 //--------------------------------------for reuse-----------------------------------------//
-
-// -------------------------------------breakpoints---------------------------------------//
-
-@media screen and (max-width: 1200px) {
-   body {
-      width: 1140px;
-
-	.bounding-container {
-		width: 1100px;
-	}
-}
-}
-@media screen and (max-width: 1199px) {
-   body {
-      width: 1198px;
-
-	.bounding-container {
-		width: 920px;
-	}
-   .triangle{
-      margin: 0 auto;
-   }
-}
-
-}
-@media screen and (max-width: 991px) {
-
-}
-@media screen and (max-width: 767px) {
-
-}
-@media screen and (max-width: 575px) {
-   .bounding-container {
-		width: 100%;
-		padding: 0 15px;
-	}
-}
